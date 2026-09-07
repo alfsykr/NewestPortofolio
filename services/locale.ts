@@ -9,9 +9,17 @@ import { Locale, defaultLocale } from "@/config";
 const COOKIE_NAME = "NEXT_LOCALE";
 
 export const getUserLocale = async () => {
-  return cookies().get(COOKIE_NAME)?.value || defaultLocale;
+  try {
+    return cookies().get(COOKIE_NAME)?.value || defaultLocale;
+  } catch {
+    return defaultLocale;
+  }
 };
 
 export const setUserLocale = async (locale: Locale) => {
-  cookies().set(COOKIE_NAME, locale);
+  try {
+    cookies().set(COOKIE_NAME, locale);
+  } catch {
+    // Ignore error when called outside request context
+  }
 };
