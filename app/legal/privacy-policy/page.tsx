@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Container from "@/common/components/elements/Container";
 import PageHeading from "@/common/components/elements/PageHeading";
-import { METADATA } from "@/common/constants/metadata";
+import { METADATA, baseUrl } from "@/common/constants/metadata";
 
 export const metadata: Metadata = {
   title: `Privacy Policy ${METADATA.exTitle}`,
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Privacy Policy for Satria Bahari's Portfolio App regarding TikTok API integration",
   keywords: "portfolio frontend developer, privacy policy, tiktok api",
   alternates: {
-    canonical: `${process.env.DOMAIN}/privacy-policy`,
+    canonical: `${baseUrl}/privacy-policy`,
   },
 };
 

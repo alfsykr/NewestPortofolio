@@ -10,15 +10,11 @@ import "./globals.css";
 import Layouts from "@/common/components/layouts";
 import ThemeProviderContext from "@/common/stores/theme";
 import NextAuthProvider from "@/SessionProvider";
-import { METADATA } from "@/common/constants/metadata";
+import { METADATA, baseUrl } from "@/common/constants/metadata";
 import { inter } from "@/common/styles/fonts";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : process.env.DOMAIN || "",
-  ),
+  metadataBase: new URL(baseUrl),
   description: METADATA.description,
   keywords: METADATA.keyword,
   creator: METADATA.creator,

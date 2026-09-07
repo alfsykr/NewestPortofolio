@@ -4,13 +4,13 @@ import { useTranslations } from "next-intl";
 import Container from "@/common/components/elements/Container";
 import PageHeading from "@/common/components/elements/PageHeading";
 import About from "@/modules/about";
-import { METADATA } from "@/common/constants/metadata";
+import { METADATA, baseUrl } from "@/common/constants/metadata";
 
 export const metadata: Metadata = {
   title: `About ${METADATA.exTitle}`,
-  description: `A short story of ${METADATA.creator}`,
+  description: "A short story about me",
   alternates: {
-    canonical: `${process.env.DOMAIN}/about`,
+    canonical: `${baseUrl}/about`,
   },
 };
 
