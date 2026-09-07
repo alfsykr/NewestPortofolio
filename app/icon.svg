@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <!-- Outer Window Container -->
+  <rect width="512" height="512" rx="64" fill="#09090B"/>
+  
+  <!-- Top Navigation Header -->
+  <!-- Left pill & dot -->
+  <rect x="56" y="56" width="72" height="40" rx="20" fill="#FFFFFF"/>
+  <circle cx="168" cy="76" r="16" fill="#FFFFFF"/>
+  <!-- Right pill -->
+  <rect x="240" y="56" width="216" height="40" rx="20" fill="#FFFFFF"/>
+
+  <!-- Horizontal Header Divider Line -->
+  <rect x="32" y="128" width="448" height="16" rx="8" fill="#FFFFFF"/>
+  
+  <!-- Vertical Grid Divider Line -->
+  <rect x="248" y="144" width="16" height="336" rx="8" fill="#FFFFFF"/>
+
+  <!-- Middle Horizontal Grid Divider Line -->
+  <rect x="32" y="304" width="448" height="16" rx="8" fill="#FFFFFF"/>
+
+  <!-- Grid Quadrants Content -->
+  <!-- 1. Top-Left Quadrant: Two Vertical Bars -->
+  <rect x="96" y="184" width="44" height="80" rx="22" fill="#FFFFFF"/>
+  <rect x="156" y="184" width="44" height="80" rx="22" fill="#FFFFFF"/>
+
+  <!-- 2. Top-Right Quadrant: Staggered Pills -->
+  <rect x="296" y="184" width="64" height="32" rx="16" fill="#FFFFFF"/>
+  <rect x="376" y="232" width="64" height="32" rx="16" fill="#FFFFFF"/>
+
+  <!-- 3. Bottom-Left Quadrant: Solid Panel -->
+  <rect x="80" y="352" width="136" height="96" rx="16" fill="#FFFFFF"/>
+
+  <!-- 4. Bottom-Right Quadrant: Center Oval Button -->
+  <rect x="312" y="376" width="104" height="48" rx="24" fill="#FFFFFF"/>
+</svg>

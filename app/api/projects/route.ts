@@ -1,0 +1,23 @@
+import { NextResponse } from "next/server";
+import { getProjectsData } from "@/services/projects";
+
+export const revalidate = 300;
+
+export const GET = async () => {
+  try {
+    const data = await getProjectsData();
+
+    return NextResponse.json(data, {
+      status: 200,
+      headers: {
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=60",
+      },
+    });
+  } catch (error: any) {
+    console.error("Project API Error:", error.message);
+    return NextResponse.json(
+      { message: "Internal Server Error", error: error.message },
+      { status: 500 },
+    );
+  }
+};
