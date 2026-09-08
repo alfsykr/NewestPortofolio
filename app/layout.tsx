@@ -12,6 +12,7 @@ import ThemeProviderContext from "@/common/stores/theme";
 import NextAuthProvider from "@/SessionProvider";
 import { METADATA, baseUrl } from "@/common/constants/metadata";
 import { inter } from "@/common/styles/fonts";
+import { authOptions } from "@/common/utils/authOptions";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -44,7 +45,7 @@ const RootLayout = async ({
   params: { locale: string };
 }>) => {
   const messages = await getMessages();
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
 
   return (
     <html lang={locale} suppressHydrationWarning={true}>
